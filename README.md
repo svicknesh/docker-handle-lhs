@@ -23,7 +23,7 @@ If you discover any typos or errors in this README.md, create an *ISSUE* with th
 4. Change the port numbers to your preferred port. Change the ports on the left before the _:_ **ONLY**.
 5. Before starting the instance, generate the relevant information about the site. Using the above information as an example
 ```bash
-/hsj/bin/hdl-setup-server ./vicknesh-data/
+./hsj/bin/hdl-setup-server ./vicknesh-data/
 ```
 6. Send the `./vicknesh-data/sitebndl.zip` to a Naming Authority to obtain a prefix.
 7. Once the Naming Authority has allocated a prefix, edit the `./vicknesh-data/config.dct` file and do the following
