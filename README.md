@@ -43,7 +43,7 @@ docker-compose up -d
 ```bash
 git clone https://github.com/svicknesh/docker-handle-lhs docker-handle-lhs
 cd docker-handle-lhs
-/hsj/bin/hdl-setup-server ./instance-data/
+./hsj/bin/hdl-setup-server ./instance-data/
 ```
 Once Naming Authority has allocated a prefix, edit `./vicknesh-data/config.dct` and replace **YOUR_PREFIX** with the prefix given. Then start up your Docker instance as the following
 
