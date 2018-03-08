@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  openjdk-handle:
+    image: openjdk-handle-8.1.4 
+    build: build/handle
+    container_name: openjdk-handle-8.1.4
+
+  handle-instance:
+    image: openjdk-handle-8.1.4
+    container_name: handle-instance
+    restart: always
+    volumes:
+      - ./instance-data:/hdldata
+    ports:
+      - 2641:2641/tcp
+      - 2641:2641/udp
+      - 8000:8000/tcp
+
