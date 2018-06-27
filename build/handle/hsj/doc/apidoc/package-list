@@ -1,4 +1,8 @@
 net.handle.api
+net.handle.apps.batch
+net.handle.apps.batch.filters
+net.handle.apps.batch.operations
+net.handle.apps.simple
 net.handle.hdllib
 net.handle.hdllib.trust
 net.handle.security

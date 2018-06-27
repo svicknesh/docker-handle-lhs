@@ -1,4 +1,41 @@
-Handle.Net Version 8.1.4 Software Release Notes
+Handle.Net Version 9.0.0 Software Release Notes
+
+Changes since 8.1.4
+
+* Handle.Net version 9 requires Java 8 or later.
+* Transition build process to use of Gradle.
+* Upgrade Berkeley DB JE version from 3.3.98 to 7.5.11.  This improves
+  performance, notably under Java 9 and later.  NOTE: downgrading to
+  an earlier version of the Handle software will not be possible using
+  the same storage directories; we recommend creating a backup before
+  upgrading.
+* Prevent bug allowing an updated handle record to temporarily appear
+  as deleted on a mirror to which it is being replicated.
+* Configurable automatic pruning of transactions storage.  Set
+  property "txnlog_num_days_to_keep" in "server_config" to be a number
+  of days after which remembered transactions will be deleted.  The
+  default of 0 means to keep forever.  Mirrors which are more than the
+  configured number of days out of date will need to redump from that
+  primary.
+* Work around changes to Java KeyAgreement API which caused issues for
+  Handle.Net version 7 and earlier clients.
+* Make it so trailing commas in JSON arrays result in useful errors
+  such as when parsing siteinfo.json.
+* Fix line number counting in hdl-genericbatch.
+* SQLHandleStorage configuration allows "trace_sql" = "yes" inside
+  "sql_settings" for debugging.
+* New "server_config" property "template_ns_override" = "yes" prevents
+  resolution of a prefix handle for handles not locally in storage.
+  This should be used for an independent handle service (see Chapter
+  10 of the Handle Technical Manual).
+* "server_config" block "http_config" now allows: "enable_trace" =
+  "no" (previously available in other locations); "enable_proxy" =
+  "no", to disable web proxy interface while retaining HTTP API and
+  native Handle resolution over HTTP; and "headers", which should be a
+  table with all keys and values being strings, each key-value pair of
+  which will be added as a header to all HTTP responses.
+* HTTP API now allows HTTP Basic auth in POST /api/sessions and PUT
+  /api/sessions/this, to authenticate in a session.
 
 Changes since 8.1.3
 
@@ -80,7 +117,9 @@ HTTP JSON REST API
 In the past, handle servers have allowed an HTTP interface which
 responded to requests in the native binary handle protocol of RFC
 3652.  Now requests can also be made using a REST API, with requests
-and responses expressed via JSON encoding.
+and responses expressed via JSON encoding.  The native binary
+handle protocol of RFC 3652 remains the usual protocol for handle
+resolution.
 
 Browser Admin Client
 
@@ -149,10 +188,11 @@ Global Handle Registry
   (see http://www.dona.net). Multiple organizations, known as MPAs
   (Multi-Primary Administrators), have been authorized and
   credentialed by DONA to provide MPA GHR Services.  CNRI will operate
-  as an MPA.  The GHR service definition 0.NA/0.NA is now distributed
-  over multiple handle records reflecting the MPAs.  A new handle
-  record 0.0/0.0 represents the DONA trust root for signature
-  verification.
+  as an MPA.  The GHR service information in the 0.NA/0.NA handle
+  record now reflects multiple handle records corresponding to the
+  several MPAs that cooperate in providing Global Handle Registry
+  services.  A new handle record 0.0/0.0 represents the DONA trust
+  root for signature verification.
 
 * HS_SERV.  Prefix handles can now have multiple HS_SERV values;
   clients will follow all of them, recursively, to construct the

@@ -1,6 +1,6 @@
-A. HANDLE.NET PUBLIC LICENSE AGREEMENT (Ver.1)
+A. HANDLE.NET PUBLIC LICENSE AGREEMENT (Ver.2)
 
-This Handle.Net Public License Agreement (ver.1) ("License Agreement")
+This Handle.Net Public License Agreement (Ver.2) ("License Agreement")
 is between Corporation for National Research Initiatives ("CNRI"),
 having an office at 1895 Preston White Drive, Reston, VA 20191-5434,
 and the Individual or Organization ("Licensee") that has accessed,
@@ -28,7 +28,7 @@ is subject to the following requirements:
   and any software or other work that is based on or incorporates all
   or any part of the HDL Software, whether retained by Licensee, or
   made available to others, shall include CNRI's copyright notice and
-  this Handle.Net Public License Agreement (ver.1) in the HDL Software
+  this Handle.Net Public License Agreement (Ver.2) in the HDL Software
   itself at LICENSE.txt or in any derivative version thereof prepared
   by Licensee. The grant of these rights is further conditioned on
   Licensee's agreement to require every sub-licensee or other person
@@ -71,7 +71,7 @@ is subject to the following requirements:
   organization other than CNRI that has been authorized and
   credentialed by the DONA Foundation to provide GHR Services; and
   information on such organizations is available at the DONA
-  Foundation website at: http://dona.net.
+  Foundation website at: https://dona.net/mpas .
 
   e. If Licensee institutes litigation against any entity (including a
   cross-claim or counterclaim in a lawsuit) alleging that the HDL
@@ -84,16 +84,16 @@ updates to the HDL Software, and CNRI will post any such updates at:
 http://handle.net. With respect to such updates to the HDL Software,
 it is Licensee's sole responsibility to install such updates promptly.
 
-4.  Trademarks: Handle.Net, Hdl.Net and CNRI are trademarks of CNRI;
-and Global Handle Registry is a trademark of the DONA Foundation
-("Trademarks"). The Trademarks may not be used in a trademark sense or
-to endorse or promote any software, services or products of Licensee,
-or any third party.
+4.  Trademarks: Handle.Net, Hdl.Net, HDL and CNRI are trademarks of
+CNRI; and Global Handle Registry, GHR, Handle System and DONA are
+trademarks of the DONA Foundation ("Trademarks"). The Trademarks may
+not be used in a trademark sense or to endorse or promote any
+software, services or products of Licensee, or any third party.
 
 5.  Disclaimer of Warranties: CNRI IS PROVIDING THE HDL SOFTWARE ON AN
 "AS IS" BASIS. CNRI EXPRESSLY DISCLAIMS AND EXCLUDES ALL WARRANTIES,
 INCLUDING, WITHOUT LIMITATION, WARRANTIES OF MERCHANTABILITY, OF
-SATISFACTORY QUALITY, AND OF FITNESS FOR A PARTICULAR PURPOSE OR
+SATISFACTORY QUALITY, OR OF FITNESS FOR A PARTICULAR PURPOSE OR
 USE. CNRI MAKES NO REPRESENTATION AND DISCLAIMS ANY WARRANTY THAT THE
 HDL SOFTWARE, AND ANY MODIFICATIONS OR ENHANCEMENTS THEREOF OR
 DERIVATIVE WORKS BASED THEREON, WILL NOT INFRINGE ANY PATENT,
@@ -109,8 +109,8 @@ HOWEVER CAUSED AND ON ANY THEORY OF CONTRACT, WARRANTY, TORT
 MISAPPROPRIATION OF INTELLECTUAL PROPERTY RIGHTS), PRODUCT LIABILITY
 OR OTHERWISE, BASED ON OR ARISING IN ANY WAY OUT OF THE PERFORMANCE OF
 THE RIGHTS AND OBLIGATIONS OF THE PARTIES UNDER THIS HANDLE.NET PUBLIC
-LICENSE AGREEMENT, EVEN IF CNRI IS ADVISED OR IS OTHERWISE AWARE OF
-THE POSSIBILITY OF SUCH DAMAGES.
+LICENSE AGREEMENT (Ver.2), EVEN IF CNRI IS ADVISED OR IS OTHERWISE
+AWARE OF THE POSSIBILITY OF SUCH DAMAGES.
 
 7.  License Agreement Versions: CNRI may publish revised and/or new
 versions of the Handle.Net Public License Agreement from time to time.
@@ -141,12 +141,60 @@ venture between CNRI and Licensee.
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-B. Third Party Licenses
+B. Third-party Licenses
 
+1. Berkeley DB Java Edition software version 7
 
-1. Berkeley DB Java Edition software.
+Copyright © 2002, 2017, Oracle and/or its affiliates. All rights reserved.
 
-Copyright (c) 2002,2010 Oracle.  All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License")
+available at:
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+implied.  See the License for the specific language governing
+permissions and limitations under the License.
+
+====================================================================
+
+2. ASM: a very small and fast Java bytecode manipulation framework
+distributed with Berkeley DB JE
+
+Copyright © 2000-2005 INRIA, France Telecom
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holders nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
+THE POSSIBILITY OF SUCH DAMAGE.
+
+====================================================================
+
+3. Berkeley DB Java Edition software version 4.1.27
+
+Copyright © 2002, 2012 Oracle and/or its affiliates.  All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
@@ -181,64 +229,45 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ====================================================================
 
-2. ASM: a very small and fast Java bytecode manipulation framework
+4. The Java Transaction API (JTA)
 
-Copyright (c) 2000-2005 INRIA, France Telecom
-All rights reserved.
+Copyright © 2006 Sun Microsystems, Inc. All rights reserved.
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions
-are met:
-1. Redistributions of source code must retain the above copyright
-   notice, this list of conditions and the following disclaimer.
-2. Redistributions in binary form must reproduce the above copyright
-   notice, this list of conditions and the following disclaimer in the
-    documentation and/or other materials provided with the distribution.
-3. Neither the name of the copyright holders nor the names of its
-   contributors may be used to endorse or promote products derived from
-   this software without specific prior written permission.
+Licensed under the COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL)
+Version 1.0: https://oss.oracle.com/licenses/CDDL
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
-LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
-THE POSSIBILITY OF SUCH DAMAGE.
+Source available at http://central.maven.org/maven2/javax/transaction/jta/1.1/
 
 ========================================================================
 
-3. Bouncy Castle License
+5. Bouncy Castle License
 
-Copyright (c) 2000 - 2013 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)
+Copyright © 2000 - 2017 The Legion of the Bouncy Castle Inc. (https://www.bouncycastle.org)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ========================================================================
 
-4. Google GSON
+6. Google GSON
 
-Copyright (c) 2008-2014 Google Inc.
+Copyright © 2008-2017 Google Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -254,24 +283,41 @@ limitations under the License.
 
 ========================================================================
 
-5. Apache Commons Codec
+7. Apache Commons Codec
 
-Copyright 2002-2013 The Apache Software Foundation
+Apache Commons Codec
 
-This product includes software developed by
+Copyright © 2002-2017 The Apache Software Foundation
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+This product includes software developed at
 The Apache Software Foundation (http://www.apache.org/).
 
-src/test/org/apache/commons/codec/language/DoubleMetaphoneTest.java contains
-test data from http://aspell.sourceforge.net/test/batch0.tab.
-Copyright (C) 2002 Kevin Atkinson (kevina@gnu.org). Verbatim copying
-and distribution of this entire article is permitted in any medium,
-provided this notice is preserved.
+src/test/org/apache/commons/codec/language/DoubleMetaphoneTest.java
+contains test data from http://aspell.net/test/orig/batch0.tab.
+Copyright © 2002 Kevin Atkinson (kevina@gnu.org)
+
+The content of package org.apache.commons.codec.language.bm has been translated
+from the original php source code available at http://stevemorse.org/phoneticinfo.htm
+with permission from the original authors.
+Original source copyright:
+Copyright © 2008 Alexander Beider & Stephen P. Morse.
 
 ========================================================================
 
-6. Jython 2.0, 2.1 License
+8. Jython 2.0, 2.1 License
 
-Copyright (c) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007 Jython Developers
+Copyright © 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007 Jython Developers
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -303,9 +349,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ==============================================================
 
-7. Jetty Web Container
+9. Jetty Web Container
 
-Copyright 1995-2014 Mort Bay Consulting Pty Ltd.
+Copyright © 1995-2016 Mort Bay Consulting Pty Ltd.
 
 The Jetty Web Container is Copyright Mort Bay Consulting Pty Ltd
 unless otherwise noted.
@@ -323,37 +369,46 @@ limitations under the License.
 
 ==============================================================
 
-8. The javax.servlet package
-Sourced from the Apache Software Foundation and is distributed under
-the apache 2.0 license.
+10. The javax.servlet package
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-http://www.apache.org/licenses/LICENSE-2.0
+Copyright © 1997-2011 Oracle and/or its affiliates. All rights reserved.
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+Licensed under the COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL)
+Version 1.0: https://oss.oracle.com/licenses/CDDL
+
+Source available at https://github.com/javaee/servlet-spec
 
 ==================================================================
 
-9. The UnixCrypt.java
+11. CIDRUtils
 
-Implements the one way cryptography used by Unix systems for simple
-password protection.  Copyright 1996 Aki Yoshida, modified April 2001
-by Iris Van den Broeke, Daniel Deville.
-Permission to use, copy, modify and distribute UnixCrypt
-for non-commercial or commercial purposes and without fee is
-granted provided that the copyright notice appears in all copies.
+Copyright © 2013 Edin Dazdarevic (edin.dazdarevic@gmail.com)
+
+CIDRUtils is released under MIT License.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 
 ==================================================================
 
-10. AtomicFile
+12. AtomicFile
 
-Copyright (C) 2009 The Android Open Source Project
+Copyright © 2009 The Android Open Source Project
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -369,11 +424,133 @@ limitations under the License.
 
 ==================================================================
 
-12. jQuery
+13. Hyperic SIGAR
+
+Copyright © 2004-2011 VMware, Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+ADDITIONAL LICENSE INFORMATION:
+
+Hyperic SIGAR includes some third-party open source components
+in its distribution. The list below identifies the community or
+organization and links to their appropriate license terms.
+
+The Hyperic team would like to thank all the communities
+of the projects listed below for their contributions.
+
+----------------------------------------------------------
+Components under the Apache License 2.0:
+----------------------------------------------------------
+
+The following components are included without modification:
+
+- log4j -
+Information: http://logging.apache.org/
+License: http://www.apache.org/licenses/LICENSE-2.0
+
+The following components are included with modification:
+
+- cpptasks -
+Information: http://ant-contrib.sourceforge.net/
+License: http://www.apache.org/licenses/LICENSE-2.0
+
+- (portions of) APR -
+Information: http://apr.apache.org/
+License: http://www.apache.org/licenses/LICENSE-2.0
+
+----------------------------------------------------------
+Components under BSD/MIT Style Licenses:
+----------------------------------------------------------
+
+The following components are included with modification:
+
+- solaris get_mib2 -
+Information: ftp://vic.cc.purdue.edu/pub/tools/unix/solaris/get_mib2/
+License: within src/os/solaris/get_mib2.[ch]
+
+Copyright © 1995 Purdue Research Foundation, West Lafayette, Indiana
+47907.  All rights reserved.
+
+Written by Victor A. Abell <abe@cc.purdue.edu>
+
+This software is not subject to any license of the American Telephone
+and Telegraph Company or the Regents of the University of California.
+
+Permission is granted to anyone to use this software for any purpose on
+any computer system, and to alter it and redistribute it freely, subject
+to the following restrictions:
+
+1. Neither Victor A  Abell nor Purdue University are responsible for
+   any consequences of the use of this software.
+
+2. The origin of this software must not be misrepresented, either by
+   explicit claim or by omission.  Credit to Victor A. Abell and Purdue
+   University must appear in documentation and sources.
+
+3. Altered versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+
+4. This notice may not be removed or altered.
+
+- getline by Chris Thewalt -
+Information: http://tinyurl.com/r438r
+License: within src/sigar_getline.c
+
+Copyright © 1991, 1992 by Chris Thewalt (thewalt@ce.berkeley.edu)
+
+Permission to use, copy, modify, and distribute this software
+for any purpose and without fee is hereby granted, provided
+that the above copyright notices appear in all copies and that both the
+copyright notice and this permission notice appear in supporting
+documentation.  This software is provided "as is" without express or
+implied warranty.
+
+- PrintfFormat.java -
+Information: http://java.sun.com/developer/technicalArticles/Programming/sprintf/PrintfFormat.java
+License: within bindings/java/src/org/hyperic/sigar/util/PrintfFormat.java
+
+© 2000 Sun Microsystems, Inc.
+ALL RIGHTS RESERVED
+
+License Grant-
+
+Permission to use, copy, modify, and distribute this Software and its
+documentation for NON-COMMERCIAL or COMMERCIAL purposes and without fee is
+hereby granted.
+
+This Software is provided "AS IS".  All express warranties, including any
+implied warranty of merchantability, satisfactory quality, fitness for a
+particular purpose, or non-infringement, are disclaimed, except to the extent
+that such disclaimers are held to be legally invalid.
+
+You acknowledge that Software is not designed, licensed or intended for use in
+the design, construction, operation or maintenance of any nuclear facility
+("High Risk Activities").  Sun disclaims any express or implied warranty of
+fitness for such uses.
+
+Please refer to the file http://www.sun.com/policies/trademarks/ for further
+important trademark information and to
+http://java.sun.com/nav/business/index.html for further important licensing
+information for the Java Technology.
+
+==============================================================
+
+14. jQuery
 
 This product includes software developed by the jQuery Foundation.
 
-Copyright 2013 jQuery Foundation and other contributors
+Copyright © 2013 jQuery Foundation and other contributors
 http://jquery.com/
 
 Permission is hereby granted, free of charge, to any person obtaining
@@ -397,11 +574,11 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==================================================================
 
-13. Twitter Bootstrap
+15. Twitter Bootstrap
 
 This product includes software developed by Twitter, Inc.
 
- Copyright 2012 Twitter, Inc.
+ Copyright © 2012 Twitter, Inc.
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -415,14 +592,13 @@ This product includes software developed by Twitter, Inc.
  See the License for the specific language governing permissions and
  limitations under the License.
 
-
 ==================================================================
 
-14. AmplifyJS
+16. AmplifyJS
 
 This product includes software developed by appendTo LLC.
 
-Copyright 2013 appendTo LLC. (http://appendto.com/team)
+Copyright © 2013 appendTo LLC. (http://appendto.com/team)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -445,7 +621,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==================================================================
 
-15. PolyCrypt
+17. PolyCrypt
 
 Copyright  ©  Raytheon BBN Technologies Corp. 2013 All Rights Reserved.
 
@@ -480,7 +656,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ==================================================================
 
-16. qrcode.js
+18. qrcode.js
 
 Licensed under the MIT license.
 
@@ -505,7 +681,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==================================================================
 
-17. vkbeautify
+19. vkbeautify
 
 Licensed under the MIT license.
 
@@ -530,7 +706,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==================================================================
 
-18. bootstrap-select
+20. bootstrap-select
 
 Licensed under the MIT license.
 
@@ -555,7 +731,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==================================================================
 
-19. ortjs dsa
+21. ortjs dsa
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -571,7 +747,7 @@ limitations under the License.
 
 ==================================================================
 
-20. Twitter typeahead.js
+22. Twitter typeahead.js
 
 Copyright  ©  2013-2014 Twitter, Inc
 
@@ -592,3 +768,21 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+==================================================================
+
+23. Gradle
+
+Copyright © 2007-2018 Gradle, Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
