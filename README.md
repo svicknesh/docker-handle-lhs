@@ -20,7 +20,7 @@ If you discover any typos or errors in this README.md, create an *ISSUE* with th
 1. Clone this repository to a folder of your choice and switch to that directory.
 2. Edit the `docker-compose.yml` file and replace *handle-instance* with a more memorable name such as *vicknesh-lhs*.
 3. For volumes, replace *./instance-data* with a folder to store Handle data related to this docker instance. For the above example, you can replace the folder name with *./vicknesh-data*
-4. Change the port numbers to your preferred port. Change the ports on the left before the _:_ **ONLY**.
+4. Change the port numbers to your preferred port. Change both the ports on the left and right of the _:_ to match. The LHS instance will listen on the configured port in *config.dct* and the host has to map the port accordingly.
 5. Before starting the instance, generate the relevant information about the site. Using the above information as an example
 ```bash
 ./hsj/bin/hdl-setup-server ./vicknesh-data/
@@ -28,6 +28,7 @@ If you discover any typos or errors in this README.md, create an *ISSUE* with th
 6. Send the `./vicknesh-data/sitebndl.zip` to a Naming Authority to obtain a prefix.
 7. Once the Naming Authority has allocated a prefix, edit the `./vicknesh-data/config.dct` file and do the following
       - Replace **YOUR_PREFIX** with the prefix allocated by the Naming Authority, for instance **11.1234** under "server_admins", "replication_admins", and "auto_homed_prefixes".
+      - Change the *bind_address* to **0.0.0.0** so that the instance can be reachable from the host. 
 8. Start the Docker instance with Docker Compose like the following
 ```bash
 docker-compose build
@@ -45,7 +46,7 @@ git clone https://github.com/svicknesh/docker-handle-lhs docker-handle-lhs
 cd docker-handle-lhs
 ./hsj/bin/hdl-setup-server ./instance-data/
 ```
-Once Naming Authority has allocated a prefix, edit `./vicknesh-data/config.dct` and replace **YOUR_PREFIX** with the prefix given. Then start up your Docker instance as the following
+Once Naming Authority has allocated a prefix, edit `./vicknesh-data/config.dct` and replace **YOUR_PREFIX** with the prefix given. Change the *bind_address* to **0.0.0.0** so that the instance can be reachable from the host. Then start up your Docker instance as the following
 
 ```bash
 docker-compose build
