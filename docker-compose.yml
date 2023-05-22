@@ -1,17 +1,15 @@
 version: "3"
 
 services:
-  openjdk-handle:
-    image: openjdk-handle-9.0.0
-    build: build/handle
-    container_name: openjdk-handle-9.0.0
-
   handle-instance:
-    image: openjdk-handle-9.0.0
+    image: git.openlab.itu.int/aims/lhs:latest
     container_name: handle-instance
-    restart: always
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
     volumes:
-      - ./instance-data:/hdldata
+      - ./instance-data:/home/lhs/data
     ports:
       - 2641:2641/tcp
       - 2641:2641/udp

@@ -1,3 +1,0 @@
-#!/bin/sh
-# Memory configuration can be changed in hdl (search hdl for "memory")
-`dirname "$0"`/hdl server "$@"

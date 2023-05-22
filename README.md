@@ -8,50 +8,57 @@ If you discover any typos or errors in this README.md, create an *ISSUE* with th
 
 ## Pre-requisites
 
-- Docker v17.05 or above.
-- Docker compose v1.17.0 or above.
-- OpenJDK 9 on the host machine.
-  - It is not compulsory to have OpenJDK on the host machine if it is just going to serve the LHS. The initial configuration can be done on another machine if needed. It is just recommended to have it installed to make management easier.
+- Docker v24 or above.
+- Docker compose v2.17.0 or above.
 
-## Deploying docker instance
-
-**NOTE**: The LHS does not need to be run as the `root` user. It is recommended to run it as a normal user who has permission to manage Docker instances.
+## Building the image
 
 1. Clone this repository to a folder of your choice and switch to that directory.
-2. Edit the `docker-compose.yml` file and replace *handle-instance* with a more memorable name such as *vicknesh-lhs*.
-3. For volumes, replace *./instance-data* with a folder to store Handle data related to this docker instance. For the above example, you can replace the folder name with *./vicknesh-data*
-4. Change the port numbers to your preferred port. Change both the ports on the left and right of the _:_ to match. The LHS instance will listen on the configured port in *config.dct* and the host has to map the port accordingly.
-5. Before starting the instance, generate the relevant information about the site. Using the above information as an example
 ```bash
-./hsj/bin/hdl-setup-server ./vicknesh-data/
+git clone https://github.com/svicknesh/docker-handle-lhs /tmp/docker-handle-lhs
+cd /tmp/docker-handle-lhs
 ```
-6. Send the `./vicknesh-data/sitebndl.zip` to a Naming Authority to obtain a prefix.
-7. Once the Naming Authority has allocated a prefix, edit the `./vicknesh-data/config.dct` file and do the following
+
+2. Switch to the `build` directory
+```bash
+cd build
+```
+
+3. Build the image using tags of your preference
+```bash
+docker build --tag "git.openlab.itu.int/aims/lhs:latest" --tag "git.openlab.itu.int/aims/lhs:9.3.1" "$(pwd)"
+```
+
+4. The LHS docker container image is now ready to be used.
+
+## Deploying docker image instance
+
+1. Refer to the sample `docker-compose.yaml` file from `https://github.com/svicknesh/docker-handle-lhs/raw/master/docker-compose.yml`
+
+2. Replace the image name with the image from the build process (if different, otherwise retain the image name).
+
+3. Change the `PUID` and `PGID` to your host username `uid` and `gid` if it's different from `1000` for both.
+
+4. For volume mount, change the name to the preferred path on the host system (left part only, do **NOT** change the right part). Create the folder with the correct `uid` and `gid` that matches step 3.
+
+5. Change the port numbers to your preferred port. Change both the ports on the left and right of the _:_ to match. The LHS instance will listen on the configured port in *config.dct* and the host has to map the port accordingly.
+
+6. This image will create the necessary configuration files for the LHS if they don't already exist. Remeber to match the ports and IP with the ones configured in step 5.
+
+7. Start up the container
+```bash
+docker compose up -d
+```
+
+8. (For new setup) Send the generated `sitebndl.zip` from the data folder from host to a Naming Authority to obtain a prefix.
+
+9. Once the Naming Authority has allocated a prefix, edit the `/config.dct` file and do the following
       - Replace **YOUR_PREFIX** with the prefix allocated by the Naming Authority, for instance **11.1234** under "server_admins", "replication_admins", and "auto_homed_prefixes".
       - Change the *bind_address* to **0.0.0.0** so that the instance can be reachable from the host. 
-8. Start the Docker instance with Docker Compose like the following
-```bash
-docker-compose build
-docker-compose up -d
-```
-9. Edit `docker-compose.yml` and add more LHS information as needed. Multiple instances can be run using Docker. Just make sure to perform task (5), (6) and (7) to configure the site. To start up the new instances, just do the following
-```bash
-docker-compose up -d
-```
 
-## Quick deployment
+9. (For future runs) Start the container as step 7.
 
-```bash
-git clone https://github.com/svicknesh/docker-handle-lhs docker-handle-lhs
-cd docker-handle-lhs
-./hsj/bin/hdl-setup-server ./instance-data/
-```
-Once Naming Authority has allocated a prefix, edit `./vicknesh-data/config.dct` and replace **YOUR_PREFIX** with the prefix given. Change the *bind_address* to **0.0.0.0** so that the instance can be reachable from the host. Then start up your Docker instance as the following
-
-```bash
-docker-compose build
-docker-compose up -d
-```
+10. Edit `docker-compose.yml` and add more LHS information as needed. Multiple instances can be run using the same `docker-compose.yaml`. 
 
 ## License
 
