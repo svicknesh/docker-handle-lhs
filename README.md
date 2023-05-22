@@ -31,6 +31,22 @@ docker build --tag "git.openlab.itu.int/aims/lhs:latest" --tag "git.openlab.itu.
 
 4. The LHS docker container image is now ready to be used.
 
+## First run
+
+1. The following commands must be run as a normal user, ideally the same one with the `PUID` and `PGID` setting. Create the folder to store the LHS configuration as the user
+```bash
+mkdir -p /home/ubuntu/lhs/test
+```
+
+2. Run the container to initialize the information needed for the operations of an LHS. replacing `/home/ubuntu/lhs/test` with the actual folder to store LHS data. This folder must match what will be in the `docker-compose.yaml`
+```bash
+docker run --rm -it -v /home/ubuntu/lhs/test:/home/lhs/data git.openlab.itu.int/aims/lhs
+```
+
+3. Make sure to set the public address to a publicly reachable IP address and the bind address to `0.0.0.0`. This is important since we're running in a container and the IP address will differ during each run.
+
+
+
 ## Deploying docker image instance
 
 1. Refer to the sample `docker-compose.yaml` file from `https://github.com/svicknesh/docker-handle-lhs/raw/master/docker-compose.yml`
